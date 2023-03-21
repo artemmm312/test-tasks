@@ -1,7 +1,8 @@
 <?php
 
 //2. Выяснить, образуют ли цифры данного натурального числа N возрастающую последовательность.
-function is_digits_ascending($n, $order = 'asc')
+
+function is_digits_ascending($n, $order = 'asc'): bool
 {
 	if (is_int($n)) {
 		

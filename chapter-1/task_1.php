@@ -1,7 +1,8 @@
 <?php
 
 //1. Определить количество цифр, меньших 5, используемых при записи натурального числа N.
-function count_digits_less_than_5($n)
+
+function count_digits_less_than_5($n): false|int
 {
 	$count = 0; // инициализация счетчика
 	if (is_int($n)) {
@@ -17,4 +18,4 @@ function count_digits_less_than_5($n)
 	return false;
 }
 
-echo count_digits_less_than_5('1234');
+echo count_digits_less_than_5(1234);
