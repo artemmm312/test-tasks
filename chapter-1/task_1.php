@@ -12,3 +12,5 @@ function count_digits_less_than_5($n) {
 	}
 	return $count; // возвращаем результат
 }
+
+echo count_digits_less_than_5(1234);
