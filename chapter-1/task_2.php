@@ -1,14 +1,21 @@
 <?php
 
 //2. Выяснить, образуют ли цифры данного натурального числа N возрастающую последовательность.
-function is_digits_ascending($n)
+function is_digits_ascending($n, $order = 'asc')
 {
 	if (is_int($n)) {
-		$last_digit = 10; // инициализация предыдущей цифры
+		
+		$order === 'asc' ? $last_digit = 10 : $last_digit = 1; // инициализация предыдущей цифры
 		while ($n > 0) { // продолжаем цикл пока число больше 0
 			$digit = $n % 10; // получаем последнюю цифру числа
-			if ($digit >= $last_digit) { // если цифры не возрастают, возвращаем false
-				return false;
+			if ($order === 'asc') {
+				if ($digit >= $last_digit) {
+					return false;
+				}
+			} elseif ($order === 'desc') {
+				if ($digit <= $last_digit) {
+					return false;
+				}
 			}
 			$last_digit = $digit; // сохраняем последнюю цифру в качестве предыдущей
 			$n = (int)($n / 10); // удаляем последнюю цифру числа
