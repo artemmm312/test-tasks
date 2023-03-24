@@ -17,7 +17,6 @@ function isPrime(int $number): bool
 
 function anythingArray(array $arr): array
 {
-	$result = $arr;
 	$columns = [];
 	$count_N = count($arr);
 	$count_M = count($arr[0]);
@@ -40,7 +39,6 @@ function anythingArray(array $arr): array
 			}
 		}
 	}
-	//return $columns;
 	return $arr;
 }
 
