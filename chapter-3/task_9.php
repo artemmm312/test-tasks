@@ -52,5 +52,4 @@ $arr =
 		[-7, 8, -9, 11],
 		[7, 8, -13, 11],
 	];
-
 print_r(anythingArray($arr));

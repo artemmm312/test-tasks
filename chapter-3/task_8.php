@@ -47,7 +47,6 @@ function anythingArray(array $arr): array
 	return $arr;
 }
 
-
 $arr =
 	[
 		[5, 2, 3, 20],
