@@ -3,7 +3,7 @@
 //15. В массиве А(N,М) столбец с минимальным количеством нечетных элементов переставить на
 // последнее место.
 
-function anythingArray(array $arr)
+function anythingArray(array $arr): array
 {
 	$count_N = count($arr);
 	$count_M = count($arr[0]);
@@ -25,12 +25,14 @@ function anythingArray(array $arr)
 			$j_odd = $j;
 		}
 	}
-	for ($i = 0; $i < $count_N; $i++) {
-		$tmp = $arr[$i][$j_odd];
-		for ($j = $j_odd; $j < $count_M - 1; $j++) {
-			$arr[$i][$j] = $arr[$i][$j + 1];
+	if ($j_odd !== $count_M - 1) {
+		for ($i = 0; $i < $count_N; $i++) {
+			$tmp = $arr[$i][$j_odd];
+			for ($j = $j_odd; $j < $count_M - 1; $j++) {
+				$arr[$i][$j] = $arr[$i][$j + 1];
+			}
+			$arr[$i][$count_M - 1] = $tmp;
 		}
-		$arr[$i][$count_M - 1] = $tmp;
 	}
 	return $arr;
 }
