@@ -16,10 +16,9 @@ function getMaxElement($row)
 
 function anythingArray(array $arr): array
 {
-	$count_N = count($arr);
-	$count_M = count($arr[0]);
-	for ($i = 0; $i < $count_N; $i++) {
-		for ($j = $i + 1; $j < $count_M; $j++) {
+	$count = count($arr);
+	for ($i = 0; $i < $count; $i++) {
+		for ($j = $i + 1; $j < $count; $j++) {
 			if (getMaxElement($arr[$i]) < getMaxElement($arr[$j])) {
 				$temp = $arr[$i];
 				$arr[$i] = $arr[$j];
@@ -32,9 +31,9 @@ function anythingArray(array $arr): array
 
 $arr =
 	[
-		[5, 1, 3, 20],
-		[4, 5, 6, -15],
-		[7, 9, 4, 11],
-		[5, -21, 40, -9],
+		[5, 1, 3, 20, 1],
+		[4, 5, 6, -15, 1],
+		[7, 9, 4, 11, 1],
+		[5, -21, 40, -9, 1],
 	];
 print_r(anythingArray($arr));
