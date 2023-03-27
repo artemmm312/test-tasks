@@ -25,7 +25,7 @@ function moveElementsByP(&$row, $p): void
 	}
 }
 
-function anythingArray(array $arr, $p): array
+function anythingArray(array $arr, int $p): array
 {
 	$arr_count = count($arr);
 	for ($i = 0; $i < $arr_count; $i++) {
